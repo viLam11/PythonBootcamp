@@ -1,0 +1,23 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "echo",
+            "type": "shell",
+            "command": "echo Hello"
+        },
+        {
+            "label": "Auto Reload Flash Card App",
+            "type": "shell",
+            "command": "cmd.exe",
+            "args": [
+                "/c",
+                "chokidar FlashCard/flash-card-project-start/main.py -c \\\"taskkill /f /im python.exe || echo No python process && cls && python FlashCard/flash-card-project-start/main.py\\\""
+            ],
+            "isBackground": true,
+            "problemMatcher": []
+        }
+    ]
+}
